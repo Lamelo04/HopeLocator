@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 
+    - primary meta tags
+  -->
+    <title>Hope Locator</title>
+    <meta name="title" content="Doclab - home">
+    <meta name="description" content="This is a madical html template made by codewithsadee">
+
+    <!-- 
+    - favicon
+  -->
+    <link rel="shortcut icon" href="/static/palestine.png" type="image/svg+xml">
+
+    <!-- 
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- 
+    - custom css link
+  -->
+    <link rel="stylesheet" href="/static/assets/css/stylefind.css">
+
+    <!-- 
+    - preload images
+  -->
+    <link rel="preload" as="image" href="/static/assets/images/hero-banner.png">
+    <link rel="preload" as="image" href="/static/assets/images/hero-bg.png">
+
+</head>
+
+<body id="top">
+
+    <!-- 
+    - #PRELOADER
+  -->
+
+    <div class="preloader" data-preloader>
+        <div class="circle"></div>
+    </div>
+
+
+
+
+
+    <!-- 
+    - #HEADER
+  -->
+
+    <header class="header" data-header>
+        <div class="container">
+
+            <a href="#" class="logo">
+                <img src="/static/palestine.png " width="76" height="06" alt="Doclab home">
+            </a>
+
+            <nav class="navbar" data-navbar>
+
+                <div class="navbar-top">
+
+                    <a href="#" class="logo">
+                        <img src="/static/palestine.png " width="136" height="46" alt="Doclab home">
+                    </a>
+
+                    <button class="nav-close-btn" aria-label="clsoe menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+
+                </div>
+
+                <ul class="social-list">
+
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-twitter"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-pinterest"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-youtube"></ion-icon>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+            <a href="https://donate.unrwa.org/-landing-page/en_EN" class="btn has-before title-md" target="_blank">تبرّع</a>
+
+            <div class="overlay" data-nav-toggler data-overlay></div>
+
+        </div>
+    </header>
+
+
+
+
+
+    <main>
+        <article>
+
+            <!-- 
+        - #HERO
+      -->
+<!-- 
+- #HERO
+-->
+
+<section class="section hero" style="background-image: url('/static/assets/images/hero-bg2.png')" aria-label="home">
+  <div class="titre">
+      <h1 >نتائج البحث </h1>
+  </div>
+  <div class="container">
+    {% for result in search_results %}
+
+      <div class="cont">
+          <div class="description">
+              <p>
+                  {{ result.data.name }} <b>: الإسم واللقب</b>
+              </p>
+              <p>
+                   <b> الجنس : </b> {{ result.data.gender }}
+              </p>
+              <p>
+                  {{ result.data.place }} <b>: التفاصيل للاتصال</b>
+              </p>
+              <p>
+                  {{ result.data.height }} <b>: الطول</b>
+              </p>
+              <p>
+                  {{ result.data.place }} <b>: المكان الحالي</b>
+              </p>
+              <p>
+                   <b>حالة صحية : </b> {{ result.data.health_status }}
+              </p>
+          </div>
+          <div class="photo-container">
+              <img src="{{ result.image }}" alt="Image Description">
+          </div>
+      </div>
+          {% endfor %}
+
+  </div>
+</section>
+
+            <!-- 
+        - #SERVICE
+      -->
+
+
+
+
+
+
+
+            <!-- 
+        - #ABOUT
+      -->
+
+
+
+
+
+
+
+            <!-- 
+        - #LISTING
+      -->
+
+
+
+
+
+
+            <!-- 
+        - #BLOG
+      -->
+
+
+
+        </article>
+    </main>
+
+
+
+
+
+    <!-- 
+    - #FOOTER
+  -->
+
+    <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer" style="background-image: url('/static/assets/images/footer-bg.png')">
+    <div class="container">
+
+      <div class="section footer-top">
+
+        <div class="footer-brand" data-reveal="bottom">
+
+          <a href="#" class="logo">
+            <img src="/static/assets/images/42705601-removebg-preview.png" width="136" height="46" loading="lazy" alt="Doclab home">
+          </a>
+
+          <ul class="contact-list has-after">
+
+            <li class="contact-item">
+
+              <div class="item-icon">
+                <ion-icon name="mail-open-outline"></ion-icon>
+              </div>
+
+              <div style="padding-left: 50px;">
+                <p style="text-align: right;">
+                   : البريد الإلكتروني 
+                   <br>
+                   <a href="mailto:TheImposters@&shy;ISSATSo.tn" class="contact-link">
+                    TheImposters@&shy;ISSATSo.tn</a>  
+                </p>
+                
+              </div>
+
+            </li>
+
+            <li class="contact-item">
+
+              <div class="item-icon">
+                <ion-icon name="call-outline"></ion-icon>
+              </div>
+
+              <div  style="padding-left: 50px;" >
+                <p style="text-align: right;">:  الهاتف</p>
+                <a href="tel:+21698787771" class="contact-link">+216 98787771</a>
+
+                
+              </div>
+
+            </li>
+
+          </ul>
+
+        </div>
+
+        
+
+        
+        
+
+      </div>
+      <div>
+        <div class="footer-list" data-reveal="bottom"></div>
+          <div class="footer-list" data-reveal="bottom"></div>
+            <div class="footer-list" data-reveal="bottom"></div>
+            <div class="footer-list" data-reveal="bottom" style="text-align: center">
+
+              <p class="headline-sm footer-list-title" style="text-align: center">من نحن ؟</p>
+    
+              <p class="text" style="text-align: center">
+                
+                نحن مجموعة من الطلاب التونسيين الذين يدرسون في المعهد العالي للعلوم التطبيقية بسوسة ويريدون مساعدة أهل غزة بطريقة ما، لذلك قمنا ببناء هذا الموقع لمساعدة الناس هناك على التعرف على الأشخاص المفقودين والإعلان عن الأشخاص الذين تم العثور عليهم حتى يتسنى لم شمل العائلات في غزة مرة أخرى
+              </p>
+    
+              <address class="address">
+                <ion-icon name="map-outline"></ion-icon>
+    
+                <span class="text" style="text-align: center">
+                  شارع الطاهر بن عاشور <br>
+                  سوسة 4003
+                </span>
+                <ion-icon name="map-outline"></ion-icon>
+              </address>
+    
+            </div>
+    
+
+        </div>
+      </div>
+      <div class="footer-bottom">
+
+        <p class="text copyright" style="justify-content: space-around;">
+          &copy; The Imposters 2023 | All Rights Reserved
+        </p>
+        <p>
+          From the river to the sea , Palestine will be free.
+        </p>
+        
+
+
+      </div>
+
+    </div>
+  </footer>
+
+
+
+    <!-- 
+    - #BACK TO TOP
+  -->
+
+    <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+        <ion-icon name="chevron-up"></ion-icon>
+    </a>
+
+
+
+
+
+    <!-- 
+    - custom js link
+  -->
+    <script src="/static/assets/js/script.js"></script>
+
+    <!-- 
+    - ionicon link
+  -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
